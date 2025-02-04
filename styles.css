@@ -171,3 +171,38 @@ body {
 .skill-excel {
     margin-right: 40px;
 }
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--text-dark);
+    background-color: var(--background-dark);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--green);
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: var(--pink);
+}
+
+.copyright{
+    margin-left: 40px;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+}
+
+.contacto img {
+    height: 40px;
+    margin-left: 40px;
+}
