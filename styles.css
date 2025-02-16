@@ -8,7 +8,7 @@
     --pink: #f5c2e7;
     --green: #a6e3a1;
     --mauve: #8839ef;
-    --blue: #1e66f5;
+    --sapphire: #7dc4e4;
 
 }
 
@@ -25,8 +25,8 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
     align-items: center;
     height: 50px;
 
@@ -39,7 +39,7 @@ body {
 
 
 .nav-left a {
-    color: var(--blue);
+    color: var(--sapphire);
     text-decoration: none;
     font-weight: bolder;
     font-size: 20px;
@@ -63,8 +63,8 @@ body {
 
 
 .nav-line {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
     height: 2px;
     border: none;
     background-color: var(--mauve);
@@ -72,29 +72,34 @@ body {
 }
 
 .nombre,
-.apellido {
+.labor {
 
-    margin-left: 40px;
+    margin-left: 80px;
     color: var(--text-light);
     display: inline-block;
     font-size: 2rem;
     font-weight: bold;
     overflow: hidden;
+    word-spacing: 20px;
 }
 
 .nombre {
-    margin-top: 120px;
+    margin-top: 160px;
+}
+
+.labor {
+    color: var(--sapphire);
 }
 
 .nombre span,
-.apellido span {
+.labor span {
     font-size: 3.1em;
     display: inline-block;
     opacity: 0;
     transform: translateY(1em);
     /* Inicia abajo */
     animation: fadeUp 0.5s ease-out forwards;
-    animation-delay: calc(0.15s * var(--i));
+    animation-delay: calc(0.060s * var(--i));
     /* Calcula el retraso dinámicamente */
 }
 
@@ -111,7 +116,7 @@ body {
 }
 
 .saludo {
-    margin-left: 40px;
+    margin-left: 80px;
     margin-right: 360px;
     margin-top: 20px;
     font-size: 35px;
@@ -126,7 +131,8 @@ body {
 
 .container {
     color: var(--text-light);
-    margin-top: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .container-skills {
