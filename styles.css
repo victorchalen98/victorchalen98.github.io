@@ -1,9 +1,11 @@
 :root {
-    --background-dark: #1e1e2e;
+    --background-dark: #24273a;
     --text-dark: #cad3f5;
 
     --background-light: #eff1f5;
     --text-light: #4c4f69;
+
+    --background-footer: #181926;
 
     --pink: #f5c2e7;
     --green: #a6e3a1;
@@ -19,7 +21,7 @@
 }
 
 body {
-    background-color: var(--background-light);
+    background-color: var(--background-dark);
 }
 
 .navbar {
@@ -38,15 +40,14 @@ body {
 }
 
 
-.nav-left a {
-    color: var(--sapphire);
+.nav-left p {
+    color: var(--green);
     text-decoration: none;
     font-weight: bolder;
     font-size: 20px;
 }
 
-.nav-right a:hover,
-.nav-left a:hover {
+.nav-right a:hover {
     color: var(--green);
     text-decoration: none;
 }
@@ -56,7 +57,7 @@ body {
 }
 
 .nav-right a {
-    color: var(--text-light);
+    color: var(--text-dark);
     text-decoration: none;
     margin-left: 20px;
 }
@@ -75,7 +76,7 @@ body {
 .labor {
 
     margin-left: 80px;
-    color: var(--text-light);
+    color: var(--text-dark);
     display: inline-block;
     font-size: 2rem;
     font-weight: bold;
@@ -85,10 +86,11 @@ body {
 
 .nombre {
     margin-top: 160px;
+    color: var(--green);
 }
 
-.labor {
-    color: var(--sapphire);
+.labor{
+    color: var(--pink);
 }
 
 .nombre span,
@@ -120,7 +122,7 @@ body {
     margin-right: 360px;
     margin-top: 20px;
     font-size: 35px;
-    color: var(--text-light);
+    color: var(--text-dark);
     /*animacion*/
     opacity: 0;
     transform: translateY(1em);
@@ -130,7 +132,7 @@ body {
 }
 
 .container {
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -143,7 +145,8 @@ body {
 
 .skills {
     display: inline-block;
-    color: var(--blue);;
+    color: var(--blue);
+    ;
     margin-left: 40px;
 }
 
@@ -160,22 +163,22 @@ body {
 .skill-tableau,
 .skill-power-bi,
 .skill-excel {
-    background-color: var(--background-dark);
+    background-color: var(--background-light);
     border-radius: 12px;
-    color: var(--text-dark);
-    padding: 40px;
+    color: var(--text-light);
+    padding: 36px;
     margin: 20px;
     text-align: center;
 }
 
 .skill-python,
 .skill-power-bi {
-    margin-left: 200px;
+    margin-left: 220px;
 }
 
 .skill-tableau,
 .skill-excel {
-    margin-right: 200px;
+    margin-right: 220px;
 }
 
 .footer-container {
@@ -183,7 +186,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     color: var(--text-dark);
-    background-color: var(--background-dark);
+    background-color: var(--background-footer);
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -198,11 +201,11 @@ footer a:hover {
     color: var(--pink);
 }
 
-.copyright{
+.copyright {
     margin-left: 40px;
 }
 
-.contacto{
+.contacto {
     display: flex;
     flex-direction: row;
     margin-right: 40px;
