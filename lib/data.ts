@@ -1,0 +1,78 @@
+// Todo el contenido del portafolio vive aquí para que sea fácil
+// de editar sin tocar los componentes.
+
+export const profile = {
+  name: "Víctor Chalén",
+  role: "Ingeniero de Software · Desarrollador Web Fullstack & Frontend",
+  location: "Guayaquil, Ecuador",
+  email: "victor98chalen@gmail.com",
+  phone: "099 948 9629",
+  github: "https://github.com/victorchalen98",
+  linkedin: "https://www.linkedin.com/in/victor-chalén-5652ab267/",
+  summary:
+    "Egresado de Ingeniería en Software con experiencia en desarrollo web fullstack y frontend. Me especializo en construir interfaces modernas, responsivas y eficientes con React, Next.js y Tailwind CSS, respaldado por conocimientos en Node.js, Python y bases de datos relacionales. Presto especial atención a la usabilidad y a las buenas prácticas de desarrollo.",
+};
+
+export const skills = [
+  {
+    category: "Frontend",
+    accent: "mauve",
+    items: ["React", "Next.js", "HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+  },
+  {
+    category: "Backend",
+    accent: "green",
+    items: ["Node.js", "Express", "Python", "Flask", "REST APIs"],
+  },
+  {
+    category: "Bases de datos",
+    accent: "blue",
+    items: ["PostgreSQL", "MySQL", "SQLite"],
+  },
+  {
+    category: "Herramientas",
+    accent: "peach",
+    items: ["Git", "GitHub", "Docker", "Figma"],
+  },
+] as const;
+
+export const experience = [
+  {
+    company: "Fundación ANEUPI",
+    role: "Desarrollador Front-end (Prácticas Preprofesionales)",
+    period: "Mayo 2025 — Julio 2025",
+    link: "https://universidadleceni.com/",
+    bullets: [
+      "Diseñé e implementé la arquitectura de componentes reutilizables utilizando Next.js y Tailwind CSS para la plataforma web institucional.",
+      "Optimicé la estructura de navegación y la maquetación en dispositivos móviles, reduciendo los pasos requeridos para acceder a la oferta académica.",
+      "Refactoricé vistas clave para mejorar los tiempos de carga y la retención de usuarios en la página de inicio.",
+    ],
+  },
+  {
+    company: "Dirección de Carrera de Ingeniería en Software",
+    role: "Pasante de Apoyo Técnico y Administrativo",
+    period: "Julio 2026 — Agosto 2026",
+    link: null,
+    bullets: [
+      "Brindé soporte operativo y gestión digital de información académica asegurando la confidencialidad de datos.",
+      "Colaboré en la resolución de incidencias técnicas y comunicación directa con estudiantes y personal docente.",
+    ],
+  },
+] as const;
+
+export const projects = [
+  {
+    name: "Agente de IA Conversacional (AI Agent)",
+    description:
+      "Asistente inteligente basado en el patrón ReAct, integrando la API de Google Gemini para la toma de decisiones autónoma entre el razonamiento lógico y la ejecución de herramientas externas. Incluye automatización como evaluación de expresiones matemáticas y gestión de archivos (lectura/escritura), con entornos controlados (sandboxing) para garantizar la integridad del sistema.",
+    stack: ["Python", "Gemini API", "ReAct", "Sandboxing"],
+    link: "https://github.com/victorchalen98/AI_Agent",
+  },
+] as const;
+
+export const education = {
+  institution: "Universidad de Guayaquil",
+  program: "Ingeniería en Software",
+  period: "2020 — Actualidad",
+  status: "Egresado",
+};

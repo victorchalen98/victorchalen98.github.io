@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+}
+
+::selection {
+  background-color: #cba6f7;
+  color: #11111b;
+}
+
+/* Foco visible consistente para navegación por teclado */
+:focus-visible {
+  outline: 2px solid #cba6f7;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Scrollbar acorde a la paleta (soportado en navegadores basados en WebKit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #181825;
+}
+::-webkit-scrollbar-thumb {
+  background: #45475a;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #585b70;
+}
