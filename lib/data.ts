@@ -3,14 +3,14 @@
 
 export const profile = {
   name: "Víctor Chalén",
-  role: "Ingeniero de Software · Desarrollador Web Fullstack & Frontend",
+  role: "Ingeniero de Software · Frontend Developer",
   location: "Guayaquil, Ecuador",
   email: "victor98chalen@gmail.com",
-  phone: "099 948 9629",
+  phone: "+593 99 948 9629",
   github: "https://github.com/victorchalen98",
   linkedin: "https://www.linkedin.com/in/victor-chalén-5652ab267/",
   summary:
-    "Egresado de Ingeniería en Software con experiencia en desarrollo web fullstack y frontend. Me especializo en construir interfaces modernas, responsivas y eficientes con React, Next.js y Tailwind CSS, respaldado por conocimientos en Node.js, Python y bases de datos relacionales. Presto especial atención a la usabilidad y a las buenas prácticas de desarrollo.",
+  "Egresado de Ingeniería en Software con experiencia en desarrollo web frontend. Me especializo en crear interfaces modernas, responsivas y eficientes utilizando React, Next.js y Tailwind CSS, con conocimientos en desarrollo backend con Node.js y Python, así como en bases de datos relacionales. Me enfoco en la usabilidad, la calidad del código y las buenas prácticas de desarrollo. "
 };
 
 export const skills = [
@@ -32,7 +32,7 @@ export const skills = [
   {
     category: "Herramientas",
     accent: "peach",
-    items: ["Git", "GitHub", "Docker", "Figma"],
+    items: ["Linux", "Git", "GitHub", "Docker", "Figma", "Power BI"],
   },
 ] as const;
 

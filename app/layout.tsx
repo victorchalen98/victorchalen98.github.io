@@ -17,7 +17,7 @@ const jbMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Víctor Chalén — Ingeniero de Software",
   description:
-    "Portafolio de Víctor Chalén, ingeniero de software especializado en desarrollo web fullstack y frontend con React, Next.js y Python.",
+    "Portafolio de Víctor Chalén, ingeniero de software especializado en desarrollo web frontend con React, Next.js y Python.",
 };
 
 export default function RootLayout({

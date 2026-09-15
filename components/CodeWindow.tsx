@@ -11,7 +11,7 @@ export default function CodeWindow() {
       </div>
       <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-relaxed">
         <code>
-          <span className="text-overlay0">// disponible para oportunidades laborales</span>
+          <span className="text-overlay0">// buscando nuevos retos</span>
           {"\n"}
           <span className="text-mauve">const</span>{" "}
           <span className="text-blue">victor</span> <span className="text-overlay2">=</span> {"{"}

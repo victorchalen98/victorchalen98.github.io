@@ -9,13 +9,14 @@ export default function About() {
         Cómo pienso el desarrollo web
       </h2>
       <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-subtext0">
-        Soy egresado de Ingeniería en Software y me enfoco en construir
-        productos web fullstack claros de usar y fáciles de mantener. Trabajo
+        Soy egresado de Ingeniería en Software y me enfoco en desarrollar
+        productos web claros, funcionales y fáciles de mantener. Trabajo
         principalmente con React y Next.js en el frontend, y con Node.js o
-        Python en el backend, apoyándome en bases de datos relacionales para
-        modelar la información. Antes de escribir código, pienso en la
-        persona que va a usar la interfaz: la usabilidad y el rendimiento no
-        son un detalle final, son parte del diseño desde el inicio.
+        Python en el backend, utilizando bases de datos relacionales para
+        estructurar y gestionar la información. <br /> <br /> Antes de escribir código, pienso
+        en las personas que van a utilizar la interfaz. Para mí, la usabilidad y
+        el rendimiento no son detalles que se resuelven al final, sino aspectos
+        que deben considerarse desde el diseño y la arquitectura del producto.
       </p>
     </section>
   );
