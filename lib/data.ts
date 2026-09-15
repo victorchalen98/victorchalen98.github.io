@@ -64,10 +64,16 @@ export const projects = [
   {
     name: "Agente de IA Conversacional (AI Agent)",
     description:
-      "Asistente inteligente basado en el patrón ReAct, integrando la API de Google Gemini para la toma de decisiones autónoma entre el razonamiento lógico y la ejecución de herramientas externas. Incluye automatización como evaluación de expresiones matemáticas y gestión de archivos (lectura/escritura), con entornos controlados (sandboxing) para garantizar la integridad del sistema.",
-    stack: ["Python", "Gemini API", "ReAct", "Sandboxing"],
+      "Asistente inteligente basado en el patrón ReAct, integrando la API de Google Gemini para la toma de decisiones autónoma entre el razonamiento lógico y la ejecución de herramientas externas. Incluye automatización como evaluación de expresiones matemáticas y gestión de archivos (lectura/escritura), con entornos controlados para garantizar la integridad del sistema.",
+    stack: ["Python", "Gemini API", "ReAct"],
     link: "https://github.com/victorchalen98/AI_Agent",
-  },
+  },{ name: "Premier League Matchday", 
+    description: "Aplicación web para consultar información y estadísticas de equipos de la Premier League, incluyendo próximo rival, racha de partidos, goleador, historial de enfrentamientos y tabla de posiciones. Desarrollada con React y Vite, con un backend en Express que funciona como proxy hacia la API de football-data.org, protegiendo las credenciales y aplicando caché para optimizar las solicitudes.", 
+    stack: ["React", "Vite", "Node.js", "Express", "Football-Data API"], 
+    link: "https://github.com/victorchalen98/premier-league-app", },
+    
+  
+  
 ] as const;
 
 export const education = {
