@@ -19,7 +19,7 @@ export default function CodeWindow() {
           {"  "}
           <span className="text-sky">role</span>
           <span className="text-overlay2">:</span>{" "}
-          <span className="text-green">&quot;Fullstack &amp; Frontend Engineer&quot;</span>
+          <span className="text-green">&quot;Frontend Developer&quot;</span>
           <span className="text-overlay2">,</span>
           {"\n"}
           {"  "}

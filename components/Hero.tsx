@@ -42,6 +42,12 @@ export default function Hero() {
             Ver proyectos
           </a>
           <a
+            href="#proyectos"
+            className="inline-flex items-center gap-2 rounded-md border border-surface1 px-5 py-2.5 text-sm font-medium text-text transition-colors hover:border-peach hover:text-peach"
+          >
+            Ver CV
+          </a>
+          <a
             href="#contacto"
             className="rounded-md border border-surface1 px-5 py-2.5 text-sm font-medium text-text transition-colors hover:border-mauve hover:text-mauve"
           >
