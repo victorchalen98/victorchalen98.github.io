@@ -17,10 +17,13 @@ export default function Experience() {
         {t.experience.title}
       </h2>
 
-      <ol data-reveal-stagger className="relative border-l border-surface0 pl-8">
+      <ol data-reveal-stagger className="experience-timeline relative border-l border-surface0 pl-8">
         {experience.map((job) => (
           <li data-reveal key={job.company} className="mb-12 last:mb-0">
-            <span className="absolute -left-[5px] mt-1.5 h-2.5 w-2.5 rounded-full border-2 border-base bg-mauve" />
+            <span
+              data-timeline-dot
+              className="absolute -left-[5px] mt-1.5 h-2.5 w-2.5 rounded-full border-2 border-base bg-mauve"
+            />
 
             <p className="font-mono text-xs text-overlay0">{job.period}</p>
 

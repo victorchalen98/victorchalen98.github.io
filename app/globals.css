@@ -24,6 +24,12 @@ html {
     transform: none !important;
     transition: none !important;
   }
+
+  .experience-timeline [data-timeline-dot] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 [data-reveal][data-reveal-ready="true"]:not([data-revealed="true"]) {
@@ -36,6 +42,21 @@ html {
     opacity 500ms ease,
     transform 500ms ease;
   transition-delay: var(--reveal-delay, 0ms);
+}
+
+.experience-timeline [data-reveal-ready="true"] [data-timeline-dot] {
+  opacity: 0;
+  transform: scale(0.4);
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.experience-timeline [data-reveal-ready="true"][data-revealed="true"]
+  [data-timeline-dot] {
+  opacity: 1;
+  transform: scale(1);
 }
 
 body {
