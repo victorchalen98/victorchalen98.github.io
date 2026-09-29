@@ -1,18 +1,23 @@
+"use client";
+
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
-import { profile } from "@/lib/data";
+import { profile as spanishProfile } from "@/lib/data";
+import { profile as englishProfile } from "@/lib/data.en";
 import SectionTag from "./SectionTag";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Contact() {
+  const { language, t } = useLanguage();
+  const profile = language === "en" ? englishProfile : spanishProfile;
+
   return (
     <section id="contacto" className="mx-auto max-w-content px-6 py-20">
-      <SectionTag>contacto</SectionTag>
+      <SectionTag>{t.contact.tag}</SectionTag>
       <h2 className="text-2xl font-semibold text-text sm:text-3xl">
-        Hablemos de tu proyecto
+        {t.contact.title}
       </h2>
       <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-subtext0">
-        Estoy disponible para proyectos de desarrollo web. Si tienes
-        una idea o necesitas ayuda con tu producto, escríbeme y con gusto la
-        conversamos.
+        {t.contact.description}
       </p>
 
       <div className="mt-8 flex flex-wrap gap-3">
@@ -21,7 +26,7 @@ export default function Contact() {
           className="inline-flex items-center gap-2 rounded-md bg-mauve px-5 py-2.5 text-sm font-medium text-crust transition-colors hover:bg-lavender"
         >
           <Mail size={16} />
-          Enviar un correo
+          {t.contact.email}
         </a>
         <a
           href={profile.linkedin}

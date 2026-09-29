@@ -1,8 +1,15 @@
+"use client";
+
 import { MapPin } from "lucide-react";
-import { profile } from "@/lib/data";
+import { profile as spanishProfile } from "@/lib/data";
+import { profile as englishProfile } from "@/lib/data.en";
 import CodeWindow from "./CodeWindow";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Hero() {
+  const { language, t } = useLanguage();
+  const profile = language === "en" ? englishProfile : spanishProfile;
+
   return (
     <section
       id="inicio"
@@ -14,7 +21,7 @@ export default function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-green" />
           </span>
-          Disponible para oportunidades laborales
+          {t.hero.availability}
         </div>
 
         <h1 className="text-4xl font-semibold leading-tight tracking-tight text-text sm:text-5xl">
@@ -39,7 +46,7 @@ export default function Hero() {
             href="#proyectos"
             className="rounded-md bg-mauve px-5 py-2.5 text-sm font-medium text-crust transition-colors hover:bg-lavender"
           >
-            Ver proyectos
+            {t.hero.projects}
           </a>
           <a
             href="/victor-chalen-cv.pdf"
@@ -47,13 +54,13 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-md border border-surface1 px-5 py-2.5 text-sm font-medium text-text transition-colors hover:border-peach hover:text-peach"
           >
-            Ver CV
+            {t.hero.cv}
           </a>
           <a
             href="#contacto"
             className="rounded-md border border-surface1 px-5 py-2.5 text-sm font-medium text-text transition-colors hover:border-mauve hover:text-mauve"
           >
-            Contactarme
+            {t.hero.contact}
           </a>
         </div>
       </div>

@@ -1,17 +1,25 @@
+"use client";
+
 import { Github } from "lucide-react";
-import { profile, projects } from "@/lib/data";
+import { profile as spanishProfile, projects as spanishProjects } from "@/lib/data";
+import { profile as englishProfile, projects as englishProjects } from "@/lib/data.en";
 import SectionTag from "./SectionTag";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Projects() {
+  const { language, t } = useLanguage();
+  const profile = language === "en" ? englishProfile : spanishProfile;
+  const projects = language === "en" ? englishProjects : spanishProjects;
+
   return (
     <section
       id="proyectos"
       className="border-y border-surface0/70 bg-mantle/40"
     >
       <div className="mx-auto max-w-content px-6 py-20">
-        <SectionTag>proyectos</SectionTag>
+        <SectionTag>{t.projects.tag}</SectionTag>
         <h2 className="text-2xl font-semibold text-text sm:text-3xl">
-          Algo que he construido
+          {t.projects.title}
         </h2>
 
         <div className="mt-8 space-y-6">
@@ -58,7 +66,7 @@ export default function Projects() {
           className="mt-8 inline-flex items-center gap-2 text-sm text-subtext1 transition-colors hover:text-mauve"
         >
           <Github size={16} />
-          Ver más proyectos en GitHub
+          {t.projects.more}
         </a>
       </div>
     </section>

@@ -1,13 +1,20 @@
+"use client";
+
 import { ExternalLink } from "lucide-react";
-import { experience } from "@/lib/data";
+import { experience as spanishExperience } from "@/lib/data";
+import { experience as englishExperience } from "@/lib/data.en";
 import SectionTag from "./SectionTag";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Experience() {
+  const { language, t } = useLanguage();
+  const experience = language === "en" ? englishExperience : spanishExperience;
+
   return (
     <section id="experiencia" className="mx-auto max-w-content px-6 py-20">
-      <SectionTag>experiencia</SectionTag>
+      <SectionTag>{t.experience.tag}</SectionTag>
       <h2 className="mb-10 text-2xl font-semibold text-text sm:text-3xl">
-        Por dónde he pasado
+        {t.experience.title}
       </h2>
 
       <ol className="relative border-l border-surface0 pl-8">

@@ -2,17 +2,18 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { href: "#sobre-mi", label: "Sobre mí" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experiencia", label: "Experiencia" },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#contacto", label: "Contacto" },
-];
+import { useLanguage } from "./LanguageProvider";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+  const links = [
+    { href: "#sobre-mi", label: t.nav.about },
+    { href: "#skills", label: t.nav.skills },
+    { href: "#experiencia", label: t.nav.experience },
+    { href: "#proyectos", label: t.nav.projects },
+    { href: "#contacto", label: t.nav.contact },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-surface0/80 bg-mantle/90 backdrop-blur">
@@ -37,15 +38,39 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button
-          type="button"
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="text-subtext1 hover:text-text md:hidden"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-3">
+          <div
+            role="group"
+            aria-label={t.languageLabel}
+            className="flex rounded-md border border-surface0 p-0.5"
+          >
+            {(["es", "en"] as const).map((option) => (
+              <button
+                key={option}
+                type="button"
+                aria-label={option === "es" ? "Español" : "English"}
+                aria-pressed={language === option}
+                onClick={() => setLanguage(option)}
+                className={`rounded px-2 py-1 font-mono text-xs transition-colors ${
+                  language === option
+                    ? "bg-surface0 text-text"
+                    : "text-subtext1 hover:text-text"
+                }`}
+              >
+                {option.toUpperCase()}
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+            className="text-subtext1 hover:text-text md:hidden"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
       {open && (

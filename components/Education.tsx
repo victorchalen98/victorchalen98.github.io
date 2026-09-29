@@ -1,12 +1,19 @@
-import { education } from "@/lib/data";
+"use client";
+
+import { education as spanishEducation } from "@/lib/data";
+import { education as englishEducation } from "@/lib/data.en";
 import SectionTag from "./SectionTag";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Education() {
+  const { language, t } = useLanguage();
+  const education = language === "en" ? englishEducation : spanishEducation;
+
   return (
     <section id="educacion" className="mx-auto max-w-content px-6 py-20">
-      <SectionTag>educación</SectionTag>
+      <SectionTag>{t.education.tag}</SectionTag>
       <h2 className="mb-8 text-2xl font-semibold text-text sm:text-3xl">
-        Formación
+        {t.education.title}
       </h2>
 
       <div className="flex flex-col justify-between gap-1 border-l-2 border-blue/40 pl-5 sm:flex-row sm:items-center">

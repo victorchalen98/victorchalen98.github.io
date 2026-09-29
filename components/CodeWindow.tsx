@@ -1,4 +1,10 @@
+"use client";
+
+import { useLanguage } from "./LanguageProvider";
+
 export default function CodeWindow() {
+  const { t } = useLanguage();
+
   return (
     <div className="w-full max-w-md rounded-lg border border-surface0 bg-mantle shadow-2xl shadow-crust/40">
       <div className="flex items-center gap-2 border-b border-surface0 px-4 py-3">
@@ -11,7 +17,7 @@ export default function CodeWindow() {
       </div>
       <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-relaxed">
         <code>
-          <span className="text-overlay0">// buscando nuevos retos</span>
+          <span className="text-overlay0">// {t.code.comment}</span>
           {"\n"}
           <span className="text-mauve">const</span>{" "}
           <span className="text-blue">victor</span> <span className="text-overlay2">=</span> {"{"}
@@ -19,7 +25,7 @@ export default function CodeWindow() {
           {"  "}
           <span className="text-sky">role</span>
           <span className="text-overlay2">:</span>{" "}
-          <span className="text-green">&quot;Frontend Developer&quot;</span>
+          <span className="text-green">&quot;{t.code.role}&quot;</span>
           <span className="text-overlay2">,</span>
           {"\n"}
           {"  "}
@@ -40,7 +46,7 @@ export default function CodeWindow() {
           {"  "}
           <span className="text-sky">status</span>
           <span className="text-overlay2">:</span>{" "}
-          <span className="text-peach">&quot;open_to_work&quot;</span>
+          <span className="text-peach">&quot;{t.code.status}&quot;</span>
           <span className="text-overlay2">,</span>
           {"\n"}
           {"}"}

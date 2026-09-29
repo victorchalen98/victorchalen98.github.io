@@ -1,5 +1,9 @@
-import { skills } from "@/lib/data";
+"use client";
+
+import { skills as spanishSkills } from "@/lib/data";
+import { skills as englishSkills } from "@/lib/data.en";
 import SectionTag from "./SectionTag";
+import { useLanguage } from "./LanguageProvider";
 
 // Tailwind necesita ver las clases completas en el código fuente para no
 // purgarlas, así que mapeamos cada acento a sus clases en vez de construirlas
@@ -12,12 +16,15 @@ const accentClasses = {
 } as const;
 
 export default function Skills() {
+  const { language, t } = useLanguage();
+  const skills = language === "en" ? englishSkills : spanishSkills;
+
   return (
     <section id="skills" className="border-y border-surface0/70 bg-mantle/40">
       <div className="mx-auto max-w-content px-6 py-20">
-        <SectionTag>stack</SectionTag>
+        <SectionTag>{t.skills.tag}</SectionTag>
         <h2 className="text-2xl font-semibold text-text sm:text-3xl">
-          Con qué trabajo
+          {t.skills.title}
         </h2>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
