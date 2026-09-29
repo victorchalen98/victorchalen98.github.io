@@ -23,17 +23,18 @@ export default function Skills() {
     <section id="skills" className="border-y border-surface0/70 bg-mantle/40">
       <div className="mx-auto max-w-content px-6 py-20">
         <SectionTag>{t.skills.tag}</SectionTag>
-        <h2 className="text-2xl font-semibold text-text sm:text-3xl">
+        <h2 data-reveal className="text-2xl font-semibold text-text sm:text-3xl">
           {t.skills.title}
         </h2>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2">
+        <div data-reveal-stagger className="mt-8 grid gap-5 sm:grid-cols-2">
           {skills.map((group) => {
             const accent = accentClasses[group.accent];
             return (
               <div
                 key={group.category}
-                className={`rounded-lg border-l-2 bg-mantle/60 p-5 ${accent.border}`}
+                data-reveal
+                className={`rounded-lg border-l-2 bg-mantle/60 p-5 motion-safe:transition-all motion-safe:duration-200 motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-lg motion-safe:hover:shadow-crust/30 ${accent.border}`}
               >
                 <h3 className={`mb-3 text-sm font-medium ${accent.text}`}>
                   {group.category}

@@ -13,13 +13,13 @@ export default function Experience() {
   return (
     <section id="experiencia" className="mx-auto max-w-content px-6 py-20">
       <SectionTag>{t.experience.tag}</SectionTag>
-      <h2 className="mb-10 text-2xl font-semibold text-text sm:text-3xl">
+      <h2 data-reveal className="mb-10 text-2xl font-semibold text-text sm:text-3xl">
         {t.experience.title}
       </h2>
 
-      <ol className="relative border-l border-surface0 pl-8">
+      <ol data-reveal-stagger className="relative border-l border-surface0 pl-8">
         {experience.map((job) => (
-          <li key={job.company} className="mb-12 last:mb-0">
+          <li data-reveal key={job.company} className="mb-12 last:mb-0">
             <span className="absolute -left-[5px] mt-1.5 h-2.5 w-2.5 rounded-full border-2 border-base bg-mauve" />
 
             <p className="font-mono text-xs text-overlay0">{job.period}</p>

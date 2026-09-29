@@ -13,15 +13,16 @@ export default function Contact() {
   return (
     <section id="contacto" className="mx-auto max-w-content px-6 py-20">
       <SectionTag>{t.contact.tag}</SectionTag>
-      <h2 className="text-2xl font-semibold text-text sm:text-3xl">
+      <h2 data-reveal className="text-2xl font-semibold text-text sm:text-3xl">
         {t.contact.title}
       </h2>
-      <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-subtext0">
+      <p data-reveal className="mt-4 max-w-xl text-[15px] leading-relaxed text-subtext0">
         {t.contact.description}
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-3">
+      <div data-reveal-stagger className="mt-8 flex flex-wrap gap-3">
         <a
+          data-reveal
           href={`mailto:${profile.email}`}
           className="inline-flex items-center gap-2 rounded-md bg-mauve px-5 py-2.5 text-sm font-medium text-crust transition-colors hover:bg-lavender"
         >
@@ -29,6 +30,7 @@ export default function Contact() {
           {t.contact.email}
         </a>
         <a
+          data-reveal
           href={profile.linkedin}
           target="_blank"
           rel="noopener noreferrer"
@@ -38,6 +40,7 @@ export default function Contact() {
           LinkedIn
         </a>
         <a
+          data-reveal
           href={profile.github}
           target="_blank"
           rel="noopener noreferrer"
@@ -48,7 +51,7 @@ export default function Contact() {
         </a>
       </div>
 
-      <div className="mt-6 flex items-center gap-2 text-sm text-subtext0">
+      <div data-reveal className="mt-6 flex items-center gap-2 text-sm text-subtext0">
         <Phone size={15} />
         {profile.phone}
       </div>

@@ -18,18 +18,19 @@ export default function Projects() {
     >
       <div className="mx-auto max-w-content px-6 py-20">
         <SectionTag>{t.projects.tag}</SectionTag>
-        <h2 className="text-2xl font-semibold text-text sm:text-3xl">
+        <h2 data-reveal className="text-2xl font-semibold text-text sm:text-3xl">
           {t.projects.title}
         </h2>
 
-        <div className="mt-8 space-y-6">
+        <div data-reveal-stagger className="mt-8 space-y-6">
           {projects.map((project) => (
             <a
               key={project.name}
+              data-reveal
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-lg border border-surface0 p-6 transition-colors hover:border-mauve/50 sm:p-8"
+              className="group block rounded-lg border border-surface0 p-6 transition-colors hover:border-mauve/50 motion-safe:transition-all motion-safe:duration-200 motion-safe:hover:-translate-y-1 motion-safe:hover:shadow-lg motion-safe:hover:shadow-crust/30 sm:p-8"
             >
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-lg font-medium text-text group-hover:text-mauve">
@@ -37,7 +38,7 @@ export default function Projects() {
                 </h3>
                 <Github
                   size={20}
-                  className="mt-1 shrink-0 text-overlay0 group-hover:text-mauve"
+                  className="mt-1 shrink-0 text-overlay0 transition-colors group-hover:text-mauve motion-safe:transition-transform motion-safe:duration-200 motion-safe:group-hover:translate-x-1 motion-safe:group-hover:-translate-y-1"
                 />
               </div>
 
